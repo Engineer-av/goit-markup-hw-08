@@ -1,0 +1,38 @@
+.activity {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+  padding-bottom: 94px;
+  background-color: $primary-background-color;
+
+  & .list {
+    display: flex;
+  }
+
+  &-list-item {
+    position: relative;
+    width: 370px;
+  }
+
+  &-list-item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &-subtitle {
+    @extend %subtitle;
+    text-align: center;
+    color: $text-color-on-acent-background;
+  }
+}
+
+.subtitle-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  padding: 27px 0;
+  background-image: linear-gradient(
+    rgba(47, 48, 58, 0.8),
+    rgba(47, 48, 58, 0.8)
+  );
+}

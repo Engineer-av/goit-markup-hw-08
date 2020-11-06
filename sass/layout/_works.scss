@@ -1,0 +1,198 @@
+.works {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $primary-background-color;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  &-button-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    @media screen and (max-width: 767px) {
+      &:nth-child(-n + 3) {
+        margin-bottom: 30px;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 1199px) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &-button-item:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  &-button-item {
+    @media screen and (max-width: 403px) {
+      &:nth-child(-n + 4) {
+        margin-bottom: 15px;
+      }
+      &:nth-child(2n) {
+        margin-right: 0px;
+      }
+    }
+    @media screen and (min-width: 404px) and (max-width: 767px) {
+      &:nth-child(-n + 3) {
+        margin-bottom: 15px;
+      }
+      &:nth-child(3n) {
+        margin-right: 0px;
+      }
+    }
+  }
+
+  &-examples-list {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  &-examples-item {
+    @media screen and (max-width: 479px) {
+      margin: 0 auto;
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+      width: 450px;
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: calc(50% - 15px);
+
+      &:not(:nth-child(even)) {
+        margin-right: 30px;
+      }
+      &:last-child {
+        margin-right: 0px;
+      }
+      &:not(:nth-last-child(-n + 2)) {
+        margin-bottom: 30px;
+      }
+    }
+    @media screen and (min-width: 1200px) {
+      width: 370px;
+      &:not(:nth-child(3n)) {
+        margin-right: 30px;
+      }
+      &:not(:nth-last-child(-n + 3)) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  &-link {
+    display: block;
+    @include animation(box-shadow);
+    &:hover,
+    &:focus {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+      cursor: pointer;
+    }
+  }
+  &-img {
+    width: 100%;
+  }
+  &-subtitle {
+    margin-bottom: 4px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: $title-text-color;
+  }
+  &-description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: 0.03em;
+    color: $primary-text-color;
+  }
+  &-content {
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    padding: 20px 24px;
+  }
+  &-thumb {
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+.filter-btn {
+  padding: 6px 22px;
+  border-radius: 4px;
+  border-color: transparent;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.625;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $title-text-color;
+  background-color: $secondary-background-color;
+
+  @include animation3(color, background-color, box-shadow);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    color: $text-color-on-acent-background;
+    background-color: $acent-color;
+  }
+}
+
+.overlay {
+  &-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(33, 150, 243, 0.9);
+    overflow: hidden;
+
+    transform: translateY(100%);
+    @include animation(transform);
+
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 15px 24px;
+
+    .works-link:hover & {
+      transform: translateY(0);
+    }
+  }
+  &-description {
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    font-size: 16px;
+    line-height: 1.556;
+
+    @media screen and (min-width: 350px) {
+      font-size: 18px;
+      line-height: 1.556;
+    }
+
+    color: $text-color-on-acent-background;
+  }
+}

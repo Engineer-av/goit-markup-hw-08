@@ -1,0 +1,67 @@
+.advantages {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $primary-background-color;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  &-container {
+    height: 120px;
+    border-radius: 4px;
+    @include centered;
+    margin-bottom: 30px;
+    background-color: $secondary-background-color;
+  }
+
+  &-subtitle {
+    margin-bottom: 10px;
+    @extend %subtitle;
+    color: $title-text-color;
+
+    @media screen and (max-width: 768px) {
+      text-align: center;
+    }
+  }
+
+  &-description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.715;
+    letter-spacing: 0.03em;
+    color: $primary-text-color;
+  }
+}
+
+.advantages-list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    &-item {
+      width: calc(50% - 15px);
+    }
+
+    &-item:not(:nth-child(even)) {
+      margin-right: 30px;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    &-item:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    &-item {
+      width: 270px;
+    }
+
+    &-item:not(:nth-child(4n)) {
+      margin-right: 30px;
+    }
+  }
+}

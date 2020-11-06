@@ -1,0 +1,34 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $main-font;
+
+  @media screen and (max-width: 767px) {
+    padding-top: 60px;
+  }
+
+  &.modal-open {
+    overflow: hidden;
+  }
+}
+
+img {
+  display: block;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.contact {
+  font-style: normal;
+}

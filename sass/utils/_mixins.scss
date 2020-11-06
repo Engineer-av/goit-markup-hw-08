@@ -1,0 +1,20 @@
+@mixin centered($type: flex) {
+  display: $type;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin animation($type) {
+  transition: $type $animation-duration $timing-function;
+}
+
+@mixin animation2($type1, $type2) {
+  transition: $type1 $animation-duration $timing-function,
+    $type2 $animation-duration $timing-function;
+}
+
+@mixin animation3($type1, $type2, $type3) {
+  transition: $type1 $animation-duration $timing-function,
+    $type2 $animation-duration $timing-function,
+    $type3 $animation-duration $timing-function;
+}

@@ -1,0 +1,39 @@
+.logo {
+  font-family: $logo-font;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.167;
+  letter-spacing: 0.03em;
+  color: $logo-color;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.192;
+  }
+
+  .navigation & {
+    display: block;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    @media screen and (min-width: 768px) {
+      margin-right: 93px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-right: 93px;
+      padding-top: 24px;
+      padding-bottom: 25px;
+    }
+  }
+
+  .footer & {
+    display: block;
+    margin-bottom: 20px;
+
+    color: $text-color-on-acent-background;
+  }
+}
+
+.logo-acent {
+  color: $acent-color;
+}
