@@ -382,10 +382,17 @@ img {
 .modal-form-agreement {
   display: inline-block;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.714;
+  font-size: 12px;
+  line-height: 1.167;
   letter-spacing: 0.03em;
   color: #757575;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form-agreement {
+    font-size: 14px;
+    line-height: 1.714;
+  }
 }
 
 .modal-form-agreement::before {
@@ -948,6 +955,7 @@ img {
 .footer-tel-link {
   width: 231px;
   font-weight: 400;
+  font-style: normal;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.03em;
