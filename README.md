@@ -1,3 +1,3 @@
-# goit-markup-hw-06
+# goit-markup-hw-08
 
-hometask #6 GoIT
+hometask #8 GoIT
